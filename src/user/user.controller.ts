@@ -30,7 +30,7 @@ import { ResetPasswordDto } from './dto/resetPassword.dto';
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @HttpCode(HttpStatus.CREATED)
+  @HttpCode(HttpStatus.OK)
   @ApiOperation({
     summary: 'User Registration',
     description: 'This API allows a new user to register.',
@@ -41,7 +41,7 @@ export class UserController {
     return await this.userService.registration(dto);
   }
 
-  @HttpCode(HttpStatus.CREATED)
+  @HttpCode(HttpStatus.OK)
   @ApiOperation({
     summary: 'View User Profile',
     description: 'Fetch user profile details by user ID.',

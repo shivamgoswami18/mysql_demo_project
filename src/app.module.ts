@@ -7,6 +7,7 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { JwtModule } from '@nestjs/jwt';
 import { JwtStrategy } from './libs/service/auth/jwt.strategy';
+import { ProductModule } from './product/product.module';
 
 @Module({
   imports: [
@@ -41,6 +42,7 @@ import { JwtStrategy } from './libs/service/auth/jwt.strategy';
     }),
 
     UserModule,
+    ProductModule,
   ],
   controllers: [AppController],
   providers: [AppService, JwtStrategy],
